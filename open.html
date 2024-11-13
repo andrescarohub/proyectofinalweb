@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Finder</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Finder</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="header">Find <br> Trending Events</h1>
+
+        <!-- Campo de búsqueda -->
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Buscar eventos..." />
+            <i class="icon">🔍</i>
+        </div>
+
+        <!-- Botones de categorías -->
+        <div class="categories">
+            <button class="category">Music Concert</button>
+            <button class="category">Exhibition</button>
+            <button class="category">Stand Up Show</button>
+            <button class="category">Theater</button>
+        </div>
+
+    <div class="container">
+        <!-- Trending Events Section -->
+        <h2 class="section-title">Trending Events <a href="#">See all</a></h2>
+        <div class="event-card trending" onclick="window.location.href='detail.html'">
+            <div class="event-info">
+                <h3 class="event-title">Coldplay: Music of the Spheres</h3>
+                <p class="event-details">📍 Gelora Bung Karno Stadium, Jakarta<br>📅 November 15, 2023</p>
+                <p class="event-price">Start from IDR1.100.000</p>
+            </div>
+        </div>
+
+        <!-- Events Near You Section -->
+        <h2 class="section-title">Events Near You <a href="#">See all</a></h2>
+        <div class="small-events">
+            <!-- Event 1 -->
+            <div class="event-card small" onclick="window.location.href='detail.html'">
+                <div class="event-info">
+                    <h3 class="event-title">Muse: Will of the People</h3>
+                    <p class="event-details">📍 Jakarta, Indonesia<br>📅 July 23, 2023</p>
+                    <p class="event-price">IDR500.000</p>
+                </div>
+            </div>
+            <!-- Event 2 -->
+            <div class="event-card small" onclick="window.location.href='detail.html'">
+                <div class="event-info">
+                    <h3 class="event-title">One Direction: Where We Are</h3>
+                    <p class="event-details">📍 Jakarta, Indonesia<br>📅 Oct 23, 2023</p>
+                    <p class="event-price">IDR800.000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

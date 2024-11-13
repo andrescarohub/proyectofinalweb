@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #d8e2f3, #f2e0f7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ffffff;
+    background-color: rgba(10, 10, 10, 0.6);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgba(48, 48, 48, 0.9);
+    color: #6f21ff;
+}
+
+.ticket-container {
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.ticket-header {
+    margin-bottom: 20px;
+}
+
+.ticket-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.ticket-info {
+    margin-bottom: 20px;
+}
+
+.ticket-info h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.ticket-info p {
+    color: #555;
+}
+
+.ticket-details {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.details-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.details-row p {
+    margin: 0;
+    font-weight: bold;
+    color: #444;
+}
+
+.ticket-top::before,
+.ticket-top::after {
+    content: "";
+    position: absolute;
+    width: 50px; /* Tamaño ajustable */
+    height: 50px;
+    background: linear-gradient(to bottom, #d8e2f3, #f2e0f7);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.ticket-top::before {
+    left: -25px; /* Ajuste para que sobresalga */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ticket-top::after {
+    right: -25px; /* Ajuste para que sobresalga */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.barcode-section {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 0 0 20px 20px;
+}
+
+.barcode-image {
+    width: 80%;
+    margin-top: 10px;
+}
+
+.barcode-text {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .ticket-container {
+        width: 90%;
+    }
+
+    .ticket-top::before,
+    .ticket-top::after {
+        width: 35px;
+        height: 35px;
+    }
+}

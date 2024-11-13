@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #d8e2f3, #f2e0f7);
+    color: #333;
+    padding: 20px;
+    position: relative; /* Para que el botón se posicione en relación a este contenedor */
+    min-height: 100vh; /* Para asegurar que la pantalla ocupe toda la altura */
+}
+
+.imagen.group {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsionarse */
+}
+
+.buy-button {
+    background-color: #6e44ff;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    left: 20px; /* Se coloca en la parte izquierda de la pantalla */
+    top: 50%; /* Centrado verticalmente */
+    transform: translateY(-50%); /* Ajuste preciso del centrado vertical */
+}
+
+.buy-button:hover {
+    background-color: #b19cd9;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .buy-button {
+        left: 10px; /* Menos espacio a la izquierda en pantallas más pequeñas */
+        padding: 12px 20px; /* Ajuste del tamaño del botón */
+    }
+}

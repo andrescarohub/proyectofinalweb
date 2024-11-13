@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coldplay Ticket</title>
+    <link rel="stylesheet" href="./css/tikets.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <script src="../js/barcode.js" defer></script>
+</head>
+
+<body>
+    <!-- Botón para regresar a la página de detalles -->
+    <a class="back-button" href="index.html"><</a>
+
+    <!-- Contenedor principal del ticket -->
+    <div class="ticket-container">
+        <!-- Encabezado con la imagen del evento -->
+        <div class="ticket-header">
+            <img src="images/coldplay.jpg" alt="Coldplay Concert" class="ticket-image">
+        </div>
+
+        <!-- Información del evento -->
+        <div class="ticket-info">
+            <h2>Coldplay : Music of the Spheres</h2>
+            <p><strong>Nov 15 2023</strong> – Gelora Bung Karno Stadium, Jakarta</p>
+        </div>
+
+        <!-- Información del usuario y detalles del ticket -->
+        <div class="ticket-details">
+            <div class="details-row">
+                <p><strong>Name:</strong> Indriyani Puspita</p>
+                <p><strong>Order Number:</strong> CLD09738PL</p>
+            </div>
+            <div class="details-row">
+                <p><strong>Date:</strong> Nov 15 2023</p>
+                <p><strong>Time:</strong> 9:00 PM</p>
+            </div>
+            <div class="details-row">
+                <p><strong>Gate:</strong> Yellow</p>
+                <p><strong>Seat:</strong> West B</p>
+            </div>
+        </div>
+
+        <!-- Separador con conectores redondeados -->
+        <div class="ticket-top"></div>
+
+        <!-- Contenedor del código de barras -->
+        <div class="barcode-section">
+            <img id="barcode" class="barcode-image" alt="Barcode">
+            <p class="barcode-text">Scan your barcode at the entry gate.</p>
+        </div>
+    </div>
+
+    <script>
+        // Generar el código de barras usando JsBarcode
+        JsBarcode("#barcode", "CLD09738PL", {
+            format: "CODE128",
+            lineColor: "#000",
+            width: 2,
+            height: 50,
+            displayValue: false
+        });
+    </script>
+</body>
+
+</html>
